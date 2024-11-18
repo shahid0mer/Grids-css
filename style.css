@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    display: grid;
+    gap: 1em;
+    padding: 1em;
+}
+
+.text-block {
+    border: 1px solid #ddd;
+    padding: 1em;
+    text-align: center;
+}
+
+/* Viewport < 540px */
+.text-block {
+    background-color: darksalmon;
+    color: 	rgb(139, 128, 0);
+}
+
+/* Viewport width between 540px and 767px */
+@media (min-width: 540px) and (max-width: 767px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    .text-block {
+        background-color: lightcoral;
+        color: darkred;
+    }
+}
+
+/* Viewport width between 768px and 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .text-block {
+        background-color: lightblue;
+        color: darkblue;
+    }
+}
+
+/* Viewport width 1024px and above */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .text-block {
+        background-color: lightgreen;
+        color: darkgreen;
+    }
+}
